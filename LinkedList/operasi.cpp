@@ -40,8 +40,11 @@ void deletebyID(List &L, infotype x) {
 
     address Prec, P;
     //-------------your code here-------------
-    // NIM : 
+    // NIM : 1301154519
+    Prec = findElm(L,x);
+    deleteAfter(Prec,P);
+    cout<<"Id yang akan di Hapus adalah : "<<info(P).id<<endl;
+    dealokasi(P);
 
-	
     //----------------------------------------
 }
