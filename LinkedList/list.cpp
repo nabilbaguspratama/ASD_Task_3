@@ -5,11 +5,11 @@ void createList(List &L) {
     * FS : first(L) diset Nil
     */
     //-------------your code here-------------
-    // NIM : 
+    // NIM :
     
-
     //----------------------------------------
 }
+
 
 address alokasi(infotype x) {
     /**
@@ -30,20 +30,23 @@ void dealokasi(address &P) {
     * FS : menghapus elemen yang ditunjuk oleh P (delete)
     */
     //-------------your code here-------------
-    // NIM : 
-
-	
+    // NIM :1301154519
+    delete P;
     //----------------------------------------
 }
-
 void insertFirst(List &L, address P) {
     /**
     * IS : List L mungkin kosong
     * FS : elemen yang ditunjuk P menjadi elemen pertama pada List L
     */
     //-------------your code here-------------
-    // NIM : 
-	
+    // NIM :1301154519
+    if (first(L) == Nill){
+        first(L) = P;
+    } else {
+        next(P) = first(L);
+        first(L) = P;
+    }
 
     //----------------------------------------
 }
@@ -54,9 +57,17 @@ void insertLast(List &L, address P) {
     * FS : elemen yang ditunjuk P menjadi elemen terakhir pada List L
     */
     //-------------your code here-------------
-    // NIM : 
-    
-	
+    // NIM :1301154519
+    if (first(L) == Nill){
+        first(L) = P;
+    } else {
+        address Q = first(L);
+        while (Q->next != Nill){
+            Q = Q->next;
+        }
+        Q->next = P;
+    }
+
     //----------------------------------------
 }
 
