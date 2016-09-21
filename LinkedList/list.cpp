@@ -5,9 +5,8 @@ void createList(List &L) {
     * FS : first(L) diset Nil
     */
     //-------------your code here-------------
-    // NIM : 
-    
-
+    // NIM :1301144365
+    first(L) = Nill;
     //----------------------------------------
 }
 
@@ -25,15 +24,19 @@ address alokasi(infotype x) {
     return P;
 }
 
-void dealokasi(address &P) {
+address alokasi(infotype x) {
     /**
-    * FS : menghapus elemen yang ditunjuk oleh P (delete)
+    * FS : mengembalikan elemen list baru dengan info = x, next elemen = Nil
     */
-    //-------------your code here-------------
-    // NIM : 
 
-	
+    address P = new elmlist;
+    //-------------your code here-------------
+    // NIM :1301144365
+    info(P) = x;
+
+    next(P) = Nill;
     //----------------------------------------
+    return P;
 }
 
 void insertFirst(List &L, address P) {
