@@ -59,15 +59,15 @@ void mainMenu(){
             insertFirst(L,P1);
             break;
         case 2:
+            cout<<"masukan id kereta yang sudah ada : ";cin>>z.id;
+            P2 = findElm(L,z);
             cout<<"masukan id kereta : ";cin>>x.id;
             cout<<"masukan nama kereta : ";cin>>x.nama;
             cout<<"masukan kelas kereta : ";cin>>x.kelas;
             cout<<"masukan kapasitas tiap gerbong kereta : ";cin>>x.kapasitas_gerbong;
             cout<<"masukan jumlah gerbong kereta : ";cin>>x.jmlh_gerbong;
             P1 = alokasi(x);
-            //cout<<"masukan id kereta yang sudah ada : ";cin>>z.id;
-            //P2 = first(L);
-            //insertAfter(P1,P2);
+            insertAfter(P1,P2);
             break;
         case 3:
             cout<<"masukan id kereta : ";cin>>x.id;
@@ -84,7 +84,8 @@ void mainMenu(){
             break;
         case 5:
             cout<<"masukan id kereta yang ingin dihapus : ";cin>>x.id;
-            deletebyID(L,x);
+            P1 = findElm(L,x);
+            deleteAfter(P1,P2);
             printInfo(L);
             break;
         case 6:
