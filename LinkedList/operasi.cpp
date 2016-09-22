@@ -1,5 +1,6 @@
 #include "list.h"
 #include "operasi.h"
+#include <iostream>
 
 
 address sentinelSearch(List L, infotype x){
@@ -41,7 +42,28 @@ void insertionSort(List &L){
     */
 
     //-------------your code here-------------
-    // NIM : 
+    // NIM : 1301144365
+    address p = L.first;
+    int k = 0;
+    while(p!=Nill){
+        k++;
+    }
+    if (L.first!= Nill){
+        address q = L.first;
+        address temp;
+        temp = new elmlist;
+        for(int i = 0; i<k; i++){
+            for (int j = 0; j<k; j++){
+                if(info(q)> info(next(q))){
+                    info(temp) = info(q);
+                    info(q) = info(next(q));
+                    info(next(q)) = info(temp);
+                }
+            }
+        }
+    } else {
+        cout<<"List Kosong !"<<endl;
+    }
 
 
     //----------------------------------------
