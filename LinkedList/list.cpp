@@ -99,19 +99,12 @@ void deleteFirst(List &L, address &P) {
     * FS : elemen pertama di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM :1301154105
-    if (first(L) != Nill){
-        P = first(L);
-        if (next(P) == Nill){
-            first(L) = Nill;
-        } else {
-            first(L) = next(P);
-            next(P) = Nill;
-        }
-    }
+    // NIM : 
+
+	
+	
     //----------------------------------------
 }
-
 
 void deleteLast(List &L, address &P) {
     /**
@@ -119,19 +112,10 @@ void deleteLast(List &L, address &P) {
     * FS : elemen tarakhir di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM :1301154105
-    if (first(L) != Nill){
-        address Q = first(L);
-        if (Q->next == Nill){
-            first(L) = Nill;
-        } else {
-            while ((Q->next)->next != Nill){
-                Q = Q->next;
-            }
-            Q->next = Nill;
-            P = Q->next;
-        }
-    }
+    // NIM : 
+
+	
+
     //----------------------------------------
 }
 
@@ -140,17 +124,9 @@ void printInfo(List L) {
     * FS : menampilkan info seluruh elemen list L
     */
     //-------------your code here-------------
-    // NIM :1301154105
-    address P = first(L);
-    while (P != Nill){
-        cout<<"id kereta                     : "<<info(P).id<<endl;
-        cout<<"nama kereta                   : "<<info(P).nama<<endl;
-        cout<<"kelas kereta                  : "<<info(P).kelas<<endl;
-        cout<<"kapasitas tiap gerbong kereta : "<<info(P).kapasitas_gerbong<<endl;
-        cout<<"jumlah gerbong kereta         : "<<info(P).jmlh_gerbong<<endl;
-        cout<<endl;
-        P = next(P);
-    }
+    // NIM : 
+
+	
     //----------------------------------------
 }
 
