@@ -163,9 +163,17 @@ void insertAfter(address Prec, address P) {
     */
     //-------------your code here-------------
     // NIM :1301154365
-
-    P=next(Prec);
-    next(P)=P;
+    if((Prec != Nill)&&(P!=Nill)){
+        if(next(Prec) != Nill){
+            next(Prec) = P;
+            next(P) = next(next(Prec));
+        } else {
+            next(Prec) = P;
+            next(P)= Nill;
+        }
+    } else {
+        cout<<"Address Tidak Ditemukan !"<<endl;
+    }
 
     //----------------------------------------
 
@@ -179,31 +187,16 @@ void deleteAfter(address Prec, address &P) {
     */
     //-------------your code here-------------
     // NIM :13011154365
-    P=next(P);
-    next(Prec)= next(P);
-    next(P)=Nill;
-
-    //----------------------------------------
-}
-
-void printhasil(List L, infotype x) {
-    /**
-    * FS : menampilkan info seluruh elemen list L
-    */
-    //-------------your code here-------------
-    // NIM :1301154105
-    address P = first(L);
-
-    while (P != Nill && info(P).id != x.id){
-        P = next(P);
+    if (Prec!= Nill){
+        if (next(Prec)!=Nill){
+            P = next(Prec);
+            next(Prec)= next(P);
+            next(P)=Nill;
+        }
+    } else {
+        cout<<"Address Tidak Ditemukan"<<endl;
     }
-        cout<<"id kereta                     : "<<info(P).id<<endl;
-        cout<<"nama kereta                   : "<<info(P).nama<<endl;
-        cout<<"kelas kereta                  : "<<info(P).kelas<<endl;
-        cout<<"kapasitas tiap gerbong kereta : "<<info(P).kapasitas_gerbong<<endl;
-        cout<<"jumlah gerbong kereta         : "<<info(P).jmlh_gerbong<<endl;
-        cout<<endl;
+
     //----------------------------------------
 }
-
 
