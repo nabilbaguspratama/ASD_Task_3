@@ -98,13 +98,10 @@ void mainMenu(){
         case 8:
             break;
         case 9:
+            case 9:
             cout<<"masukan Id yang ingin dicari : ";cin>>x.id;
             sentinelSearch(L,x);
-            cout<<x.id;
-            cout<<x.nama;
-            cout<<x.kelas;
-            cout<<x.kapasitas_gerbong;;
-            cout<<x.jmlh_gerbong;
+            printhasil(L,x);
             break;
         case 10:
             cout<<"Exiting!"<<endl;
