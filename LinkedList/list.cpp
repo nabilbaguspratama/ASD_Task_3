@@ -186,3 +186,24 @@ void deleteAfter(address Prec, address &P) {
     //----------------------------------------
 }
 
+void printhasil(List L, infotype x) {
+    /**
+    * FS : menampilkan info seluruh elemen list L
+    */
+    //-------------your code here-------------
+    // NIM :1301154105
+    address P = first(L);
+
+    while (P != Nill && info(P).id != x.id){
+        P = next(P);
+    }
+        cout<<"id kereta                     : "<<info(P).id<<endl;
+        cout<<"nama kereta                   : "<<info(P).nama<<endl;
+        cout<<"kelas kereta                  : "<<info(P).kelas<<endl;
+        cout<<"kapasitas tiap gerbong kereta : "<<info(P).kapasitas_gerbong<<endl;
+        cout<<"jumlah gerbong kereta         : "<<info(P).jmlh_gerbong<<endl;
+        cout<<endl;
+    //----------------------------------------
+}
+
+
